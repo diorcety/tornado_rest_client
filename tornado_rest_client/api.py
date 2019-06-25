@@ -482,7 +482,6 @@ class RestClient(object):
         return full_url
 
     @gen.coroutine
-    @retry
     def fetch(self, url, method, params={},
               auth_username=None, auth_password=None, timeout=None):
         """Executes a web request asynchronously and yields the body.
